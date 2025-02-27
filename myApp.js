@@ -1,9 +1,8 @@
-let express = require('express');
+let express = require("express");
 let app = express();
 app.get('/' , (req, res) =>{
-   res.send('Hello khona flgrouna');
+   res.send("Hello Express");
 });
-
 
 
 
