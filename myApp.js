@@ -2,6 +2,15 @@ let dotenv = require('dotenv').config();
 let express = require("express");
 let app = express();
 
+app.get('/now' , function (req , res , next){
+   req.time = new Date().toString();
+   next();
+},
+   res.json({
+      time : req.time
+   });
+);
+
 
 app.use(function middleware(req , res , next){
    console.log(`${req.method} ${req.path} - ${req.ip}`);
