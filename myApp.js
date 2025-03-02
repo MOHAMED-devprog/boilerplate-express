@@ -19,7 +19,10 @@ app.get('/json', function(req , res){
       });
 });
 
-
+app.use(function(req , res , next){
+   console.log(`${req.method} ${req.path} - ${req.ip}`);
+   next();
+});
 
 
 
