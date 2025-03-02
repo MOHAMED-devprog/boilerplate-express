@@ -8,7 +8,9 @@ let path = __dirname + '/public' ;
 app.use('/public' , express.static(path));
 
 app.get('/json', function(req , res){
-   res.json().send('/views');
+   res.json({
+      message : 'Hello json'
+   });
 });
 
 
