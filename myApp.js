@@ -8,7 +8,7 @@ app.get('/now' , function (req , res , next){
 },
    res.json({
       time : req.time
-   });
+   })
 );
 
 
