@@ -38,7 +38,10 @@ app.get('/json', function(req , res){
 });
 
 
-
+app.get("/:word/echo" , function(req , res){
+   const res = {echo : req.params.word};
+   res.json(res);
+})
 
 
 
