@@ -58,7 +58,13 @@ app.route('/name').get((req , res)=>{
 
 app.use(bodyParser.urlencoded({extended : false}));
 
-
+app.post('/name' , (req, res)=>{
+   const first = req.body.first;
+   const last = req.body.last;
+   res.json({
+      name : first+" "+last;
+   })
+})
 
 
 
