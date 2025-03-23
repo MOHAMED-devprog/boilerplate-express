@@ -1,6 +1,7 @@
 let dotenv = require('dotenv').config();
 let express = require("express");
 let app = express();
+let bodyParser = require("body-parser");
 
 app.get('/now' , function (req , res , next){
    req.time = new Date().toString();
@@ -55,7 +56,7 @@ app.route('/name').get((req , res)=>{
    
 
 
-
+app.use(bodyParser.urlencoded({extended : false}));
 
 
 
